@@ -88,10 +88,10 @@ INFO[0000] Check the deployment status executing 'kubeless function ls hello'
 
 Let's take a closer look at the command:
 
-1. hello: This is the name of the function we want to deploy.
-1.  --runtime python2.7: This is the runtime we want to use to run our function. Run kubeless get-server-config to see all the available options.
-1. --from-file function.py: This is the file containing the function code. This can be a file or a zip file of up to 1MB of size.
-1. --handler function.hello: This specifies the file and the exposed function that will be used when receiving requests. 
+1. `hello`: This is the name of the function we want to deploy.
+1.  `--runtime python2.7`: This is the runtime we want to use to run our function. Run kubeless get-server-config to see all the available options.
+1. `--from-file hello.py`: This is the file containing the function code. This can be a file or a zip file of up to 1MB of size.
+1. `--handler function.hello`: This specifies the file and the exposed function that will be used when receiving requests. 
 
 Your function will be ready in a minute or so. Check its state by running the command below:
 
@@ -134,10 +134,10 @@ mountpath: /kubeless
 
 Let's take a deeper look the content of the manifest:
 
-1. name: This is the name of the function you want to develop in.
-1. command: This is the command you want to execute. We use `bash` to get a remote terminal into our development container.
-1. workdir: This is the working directory of our remote terminal. We use  `/` because that's where we are going to be executing our code from.
-1. mountpath: Our local files will be synchronized to this path.
+1. `name`: This is the name of the function you want to develop in.
+1. `command`: This is the command you want to execute. We use `bash` to get a remote terminal into our development container.
+1. `workdir`: This is the working directory of our remote terminal. We use  `/` because that's where we are going to be executing our code from.
+1. `mountpath`: Our local files will be synchronized to this path.
 
 
 You are ready to start developing in the cluster. Go back to your terminal and run the command below:
@@ -224,7 +224,7 @@ In this tutorial we show you how to use `okteto` together with `kubeless` to spe
 
 With `okteto`, you run `okteto up` once, and iterate directly in your function's container. Not only do you have minutes on each validation loop, but since you are running your code directly in your container, you are also testing that your code works as a `kubeless` function from the very beginning.
 
-`okteto` works with pretty much any Cloud Native Application. Check out our samples repository to learn how to use `okteto` with your favorite framework and programming language.
+`okteto` works with pretty much any Cloud Native Application. [Check out our samples repository](https://github.com/okteto/samples) to learn how to use `okteto` with your favorite framework and programming language.
 
 # Cleanup
 
