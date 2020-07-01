@@ -224,6 +224,8 @@ In this tutorial we show you how to use `okteto` together with `kubeless` to spe
 
 With `okteto`, you run `okteto up` once, and iterate directly in your function's container. Not only do you have minutes on each validation loop, but since you are running your code directly in your container, you are also testing that your code works as a `kubeless` function from the very beginning.
 
+`okteto` works with pretty much any Cloud Native Application. Check out our samples repository to learn how to use `okteto` with your favorite framework and programming language.
+
 # Cleanup
 
 You can delete the function using the command below:
